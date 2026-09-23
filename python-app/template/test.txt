@@ -1,2 +1,4 @@
-Aplicacion {{ values.app_name }}
-Ambiente {{ vakues.app_env }}
+Hi, this is a test file
+
+The app's name is: ${{ values.app }}
+The app's env is: ${{ values.app_env }}
