@@ -40,8 +40,8 @@ spec:
       input:
         url: ./template
         values:
-          component_id: ${{ parameters.component_id }}
-          enviroment: ${{ parameters.enviroment }}
+          app_name: ${{ parameters.component_id }}
+          app_env: ${{ parameters.enviroment }}
   
     - id: publish
       name: Publish
@@ -50,8 +50,6 @@ spec:
         description: This is ${{ parameters.component_id }}
         repoUrl: github.com?owner=juancrespo25&repo=${{parameters.component_id}}
         protectDefaultBranch: false
-        repoVisibility: public
-        defaultBranch: 'main'
 
     - id: register
       name: Register
