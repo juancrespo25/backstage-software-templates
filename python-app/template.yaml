@@ -50,6 +50,7 @@ spec:
         description: This is ${{ parameters.component_id }}
         repoUrl: github.com?owner=juancrespo25&repo=${{parameters.component_id}}
         protectDefaultBranch: false
+        defaultBranch: ${{ parameters.enviroment }}
 
     - id: register
       name: Register
