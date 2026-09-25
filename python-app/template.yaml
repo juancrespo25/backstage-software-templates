@@ -27,10 +27,8 @@ spec:
           type: string
           description: The enviroment where this component will be deploy
           enum:
-            - prod
             - dev
-            - qa
-            - staging
+            - prod
 
   # here's the steps that are executed in series in the scaffolder backend
   steps:

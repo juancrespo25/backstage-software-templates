@@ -1,0 +1,15 @@
+replicaCount: 2
+name: ${{ values.app_name }}
+namespace: ${{ values.app_name }}
+image:
+  repository: ${{ '${{ secrets.DOCKERHUB_USERNAME }}' }}/${{ values.app_name }}
+  tag: ${{ values.app_name }}-${{ values.app_env }}-latest
+deployment:
+  port: 5000
+service:
+  port: 80
+gateway:
+  name: api-gateway
+  namespace: ns-gateway-api
+  className: nginx
+  port: 80

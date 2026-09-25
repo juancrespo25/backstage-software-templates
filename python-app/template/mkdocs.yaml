@@ -1,0 +1,13 @@
+site_name: '${{ values.app_name }}'
+site_description: 'Main documentation for ${{ values.app_name }}'
+repo_url: https://github.com/juancrespo25/${{ values.app_name }}
+docs_dir: docs # Markdown. Nunca ".". Sin cambio.
+
+plugins:
+  - techdocs-core
+
+# For sidebar navigation on https://backstage.io/, see `microsite/sidebars.js`
+nav:
+  - Overview:
+      - Getting started: index.md
+      - Arquitectura: arquitectura.md 

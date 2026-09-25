@@ -1,12 +1,12 @@
+# python-app/catalog-info.yaml  (reemplazar todo el contenido)
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Location
 metadata:
-  name: ${{values.app_name}}
-  description: Python app that displays time - named ${{values.app_name}}
-  annotations:
-    github.com/project-slug: juancrespo25/${{values.app_name}}
-    backstage.io/techdocs-ref: dir:.
+  name: ${{ values.app_name }}
+  description: Location raíz — Component, Group y User de python-app
 spec:
-  type: service
-  owner: development
-  lifecycle: experimental
+  type: url
+  targets:
+    - ./catalog/component.yaml
+    - ./catalog/groups.yaml
+    - ./catalog/users.yaml
