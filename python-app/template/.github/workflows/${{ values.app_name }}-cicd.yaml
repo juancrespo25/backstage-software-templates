@@ -68,5 +68,5 @@ jobs:
       - name: Argocd app sync
         shell: bash
         run: |
-          argocd login argocd-server.argocd --auth-token ${{ '${{ secrets.ARGOCD_TOKEN }}' }}
+          argocd login argocd-server.argocd --insecure --auth-token ${{ '${{ secrets.ARGOCD_TOKEN }}' }}
           argocd app sync ${{ values.app_name }}
