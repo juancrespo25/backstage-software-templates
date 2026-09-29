@@ -43,7 +43,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Clonar repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Update values.yaml with new image tag
         shell: bash
@@ -68,5 +68,5 @@ jobs:
       - name: Argocd app sync
         shell: bash
         run: |
-          argocd login argocd-server.argocd --insecure --username ${{ '${{ secrets.ARGOCD_ADMIN }}' }} --password ${{ '${{ secrets.ARGOCD_PASSWORD }}' }}
+          argocd login argocd-server.argocd --auth-token ${{ '${{ secrets.ARGOCD_TOKEN }}' }}
           argocd app sync ${{ values.app_name }}
