@@ -51,7 +51,7 @@ jobs:
           curl -sSL -o /tmp/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
           chmod +x /tmp/yq
           /tmp/yq -i '.image.tag = "${{ '${{ needs.ci.outputs.commit_id }}' }}"' charts/${{values.app_name}}/values-${{values.app_env}}.yaml
-          cat charts/flask-app-chart/values.yaml
+          cat charts/${{values.app_name}}/values-${{values.app_env}}.yaml
   
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
