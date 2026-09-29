@@ -48,6 +48,7 @@ spec:
         description: This is ${{ parameters.component_id }}
         repoUrl: github.com?owner=jcv-dev-25&repo=${{parameters.component_id}}
         protectDefaultBranch: false
+        repoVisibility: public
         defaultBranch: ${{ parameters.enviroment }}
 
     - id: register
