@@ -27,6 +27,9 @@ spec:
           type: string
           description: The enviroment where this component will be deploy
           enum:
+            - main
+            - master
+            - feature/backstage
             - dev
             - prod
 
